@@ -9,7 +9,7 @@ import warnings
 
 warnings.simplefilter('ignore')
 reader = Reader()
-ratings = pd.read_csv('ratings_small.csv')
+ratings = pd.read_csv('./tmdb-5000-movie-dataset/ratings.csv')
 ratings.head()
 
 data = Dataset.load_from_df(ratings[['userId', 'movieId', 'rating']], reader)
